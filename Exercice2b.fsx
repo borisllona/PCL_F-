@@ -8,17 +8,20 @@ module ex2b =
     let rec pmLength ls = 
         match ls with
         // head::tail means that there are elements in the list
-        | head :: tail -> 1 + pmLength tail
         | [] -> 0
+        | head :: tail -> 1 + pmLength tail
+
     
     pmLength(['x';'y';'z'])
 
     let rec pclSum ls =
        match ls with
-       | head :: tail -> head + pclSum tail
        | [] -> 0
+       | head :: tail -> head + pclSum tail
+ 
 
     pclSum([2;3;5;8])
+
 
     let rec takeSome n xs =
         match (n,xs) with

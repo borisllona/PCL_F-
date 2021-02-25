@@ -26,7 +26,7 @@ module ex2c =
        | [] -> 0
 
 
-    let pclFoldBack arr =
-        List.foldBack pclSum arr
-
-    pclFoldBack numbers
+    let list1 = [ 1; 5; 100; 450; 788 ];
+    let deconstruct values=
+        for i in list1 do
+            printfn "%d" i
