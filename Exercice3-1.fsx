@@ -23,10 +23,9 @@ module exec3 =
 
     //3.2
     
-    let filt arr = List.filter (fun x -> for i in [x..0] do x % i = 0 ) arr
-    filt [1; 2; 3; 4; 5; 6]
-    
-    //No idea
+    let primeNums num = [for value in 2..num-1 do if num%value = 0 then yield num]
+    let primes num = [for value in 1..num do if primeNums value = [] then yield value]
+    primes 50
 
     //3.4
     let doubleNum x = x*2

@@ -30,3 +30,9 @@ module ex2b =
              | (_,x::xs) -> x :: takeSome (n-1) xs
 
     takeSome 1 ['a';'b';'c';'d']
+
+    let odd l = List.filter(fun x->x%2=0) l
+
+    odd [1;3;5;68]
+
+    type Rectangle = width : float * length : float
