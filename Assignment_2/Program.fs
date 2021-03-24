@@ -1,14 +1,16 @@
 ﻿// Learn more about F# at http://docs.microsoft.com/dotnet/fsharp
+module Types
 
 open System
-open Types
+open Types.fs
 
 //-------Assignment code-------
 type DTGCafeMessage =
     | OrderDrink of Drink * int // e.g. (Coffe, 5)
     | LeaveAComment of string
 
-let dtgVAT (price:float, vat:float):float = price + price * vat //not sure how can we have n or x as float, since n is VAT (0.2 == 20%) and x is total price? which is a float
+let dtgVAT n vat= 
+    (float n)*vat //not sure how can we have n or x as float, since n is VAT (0.2 == 20%) and x is total price? which is a float
 
 let getDrinkName drink =
     match drink with
